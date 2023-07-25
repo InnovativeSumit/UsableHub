@@ -4,8 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>UsabilityHub</title>
     <link rel="stylesheet" href="/WebHub/style.css">
+    <link rel="stylesheet" href="/WebHub/media-queries.css">
+
+    <link rel="icon"
+        href="./assets/asset 0.png"
+        sizes="96x96" type="image/x-icon">
 </head>
 
 <body>
@@ -24,16 +29,19 @@
             <a href="#" class="company-logo">
                 <img src="/WebHub/assets/asset 1.png" alt="Company logo">
             </a>
-            <div class="nav-links">
+            <div class="nav-links " id="nav-links">
                 <ul class="flex">
-                    <li><a href="#" class="hover-link">Products</a></li>
+                    <li><a href="./Product.html" class="hover-link">Products</a></li>
                     <li><a href="#" class="hover-link">Customer</a></li>
-                    <li><a href="#" class="hover-link">Pricing</a></li>
+                    <li><a href="./Gallery.html" class="hover-link">Gallery</a></li>
                     <li><a href="#" class="hover-link">Resources</a></li>
-                    <li><a href="#" class="hover-link secondary-button">Sign In</a></li>
-                    <li><a href="#" class="hover-link primary-button ">Sign Up</a></li>
+                    <li><a href="./signup.html" class="hover-link secondary-button">Log In</a></li>
+                    <li><a href="./signup.html" class="hover-link primary-button ">Sign Up</a></li>
                 </ul>
             </div>
+            <a href="#" class="nav-toggle hover-link" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
         </div>
     </nav>
 
@@ -133,7 +141,7 @@
         </div>
     </section>
     <section class="big-feature-section">
-        <div class="container flex big-feature-container" style="flex-direction: row-reverse;">
+        <div class="container flex big-feature-container" id ="second-big-feature">
             <div class="feature-img">
                 <img src="./assets/asset 21.png" alt="">
             </div>
@@ -251,6 +259,16 @@
 
 
     <script src="https://kit.fontawesome.com/2e40ad0ea6.js" crossorigin="anonymous"></script>
+
+    <script>
+        const toggleButton = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links'); 
+
+        toggleButton.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        })
+
+    </script>
 </body>
 
 </html>
